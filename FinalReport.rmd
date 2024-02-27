@@ -17,18 +17,19 @@ triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
 
 A new  preventative aides drug (triUmpsal) is under test in clinical trials. Consider only the DrugUsers, does this drug seem effective?  Hint - use dplyr to obtain that subpopulation with the filter command.
 
-$H_0$: 
-$H_A$:
+$H_0$: The new preventive aides vaccine does not seems effective for the drugUsers
+
+$H_A$: The new preventive aides vaccine does seem effective for the drugUsers
 
 
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
-variable we use are:
-treatment - categorical
-DrugUser - categorical
-Infected - categorical
+variable we use are:  
+treatment - categorical  
+DrugUser - categorical  
+Infected - categorical  
 
 
 infected depends on treatment among users
@@ -58,7 +59,7 @@ type="percent")
 
 ```
 
-The graphic show the people infected with aids is the
+The graphic show the people that have been given the placebo that percentage ha being raising does that are getting the drugs the percentage show that is lower meaning the drug is working
 
 ### Numerical Descriptive Results
 
@@ -76,14 +77,20 @@ In the graph if you infected whith aids then 24.29% were getting the drug and  7
 
 ## Inferential Results
 
+```{r}
+chisq.test(table1)
+fisher.test(table1)
+```
+
+in this test it seems the p-value is 0.0000000423 it looks like the vaccine is working among those who have aids.
+
+
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research
 question!-->
 
 
-
-
-
-
 # Discussion and Conclusion
+
+The problems here is this data is trying to figure out if the vaccine is effective among aids based on the data the p-value 0.0000000423 which is less than 0.05 meaning the we reject the null hypothesis and conclude that the new drug aids is effective.
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
