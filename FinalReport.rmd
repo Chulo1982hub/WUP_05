@@ -82,7 +82,7 @@ chisq.test(table1)
 fisher.test(table1)
 ```
 
-in this test it seems the p-value is 0.0000000423 it looks like the vaccine is working among those who have aids.
+in this test it seems the p-value is 0.0000000423 it looks like the vaccine is working among those who have aids. the odds are 1:2.9 which means the odds the get aids is 1%.
 
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research
